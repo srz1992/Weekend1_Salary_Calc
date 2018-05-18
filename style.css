@@ -1,0 +1,28 @@
+body {
+    font-family: Calibri, Garamond, Helvetica, 'Times New Roman', Times, serif;
+}
+
+.jumbotron {
+    background-color: #B9CCD0;
+}
+
+button {
+    border: 2px solid #B8B8B8 !important;
+    justify-content: right;
+    text-align: right;
+    float: right;
+    display: inline-block;
+}
+
+input {
+    border: 1px solid;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+}
