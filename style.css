@@ -1,5 +1,10 @@
+#addButton {
+    background-color: #88E188;
+}
+
 body {
     font-family: Calibri, Garamond, Helvetica, 'Times New Roman', Times, serif;
+    background-color: #F1F8FD;
 }
 
 .jumbotron {
@@ -48,4 +53,8 @@ th, td {
     line-height: 50px;
     float: right;
     margin-right: 30px;
+}
+
+.removeRow {
+    background-color: #D46A6A;
 }
