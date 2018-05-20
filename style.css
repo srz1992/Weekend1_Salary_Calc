@@ -17,6 +17,18 @@ input {
     border: 1px solid;
 }
 
+table {
+    margin-top: 50px;
+}
+
+.removeable {
+    cursor: pointer;
+}
+
+.removeable:hover {
+    background-color: #EEEEEE;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -24,6 +36,8 @@ table, th, td {
 
 th, td {
     text-align: center;
+    padding-left: 0px ;
+    padding-right: 0px ;
 }
 
 .cost-div{
@@ -33,4 +47,5 @@ th, td {
     vertical-align: middle;
     line-height: 50px;
     float: right;
+    margin-right: 30px;
 }
