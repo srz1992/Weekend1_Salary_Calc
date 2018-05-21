@@ -4,7 +4,6 @@ let employees = [];
 let costs= 0;
 
 
-
 class Employee {
     //create employee constructor
     constructor (firstName,lastName,id,title,annualSalary) {
@@ -23,12 +22,32 @@ function readyNow(){
     $('#addButton').on('click', appendToTable)
     $('#addButton').on('click', clearInputs)
     $('#addButton').on('click', calculateCosts)
+    // toggleButton();
+    // $('#addButton').attr('disabled', 'disabled');
     //display table header when document is ready
     displayTableHeader();
     //display monthly costs when document is ready
     displayMonthlyCosts();
 
+    
 }
+
+if ( $('input').val() == '') {
+    $('#addButton').attr('disabled', 'disabled');
+}
+else {
+    $('#addButton').removeAttr('disabled');
+}
+
+// function toggleButton(){
+//     if ( $('input').val() == '') {
+//         $('#addButton').attr('disabled', 'disabled');
+//     }
+//     else {
+//         $('#addButton').removeAttr('disabled');
+//     }
+   
+// }
 
 //pushes new employee object into array and appends new employee to table by running displayTable()
 function appendToTable() {
@@ -48,7 +67,6 @@ function displayTableHeader(){
     headerOutput+= `<th scope="col">Annual Salary</th>`;
     headerOutput+= `<th scope="col"></th></tr>`
     displayHeader.append(headerOutput);
-    
 }
 
 //displays table. empties the table each time appendToTable is run, and then loops through
