@@ -28,7 +28,12 @@ function readyNow(){
     displayTableHeader();
     //display monthly costs when document is ready
     displayMonthlyCosts();
-
+    // $('#bttnsubmit').attr('disabled','disabled');
+    //  $('input[type="text"]').keyup(function() {
+    //     if($(this).val() != '') {
+    //        $('input').removeAttr('disabled');
+    //     }
+    //  });
     
 }
 
@@ -39,6 +44,10 @@ else {
     $('#addButton').removeAttr('disabled');
 }
 
+// function toggleButton(ref,bttnID){
+//     document.getElementById(bttnID).disabled= ((ref.value !== ref.defaultValue) ? false : true);
+//   }
+
 // function toggleButton(){
 //     if ( $('input').val() == '') {
 //         $('#addButton').attr('disabled', 'disabled');
@@ -46,7 +55,6 @@ else {
 //     else {
 //         $('#addButton').removeAttr('disabled');
 //     }
-   
 // }
 
 //pushes new employee object into array and appends new employee to table by running displayTable()
@@ -91,6 +99,7 @@ function displayTable(){
 
     //adds event listener to submit button to delete button in each row
     $('.removeRow').on('click', removeTableRow)
+    calculateCosts();
 }
 
 //clears input fields
@@ -111,7 +120,7 @@ function calculateCosts(){
 //appends cost variable onto the DOM
 function displayMonthlyCosts (){
     $('#monthlyCosts').empty();
-    $('#monthlyCosts').append('<p> Monthly Costs: ' + costs + '</p>');
+    $('#monthlyCosts').append('<p> Monthly Costs: ' + costs/12 + '</p>');
     theCostsAreTooDamnHigh();
 }
 
@@ -120,7 +129,9 @@ function theCostsAreTooDamnHigh(){
     if (costs > 20000){
     $('.cost-div').css("background-color", "red");
     console.log('the costs are too damn high');
-    
+    }
+    else {
+     $('.cost-div').css("background-color", "")
     }
 }
 
@@ -138,7 +149,6 @@ function removeTableRow(){
         }
     }
     displayTable();
-   
-}
+ }
  
 

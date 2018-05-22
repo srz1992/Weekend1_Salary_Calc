@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    function toggleButton(ref,bttnID){
+      document.getElementById(bttnID).disabled= ((ref.value !== ref.defaultValue) ? false : true);
+    }
+    </script>
+    
+    <form action="" method="post" id="subscribe" name="subscribe">
+    <label>NAME:</label>
+    <input type="text" name="name" class="subName" onkeyup="toggleButton(this,'bttnsubmit');">
+    <label>EMAIL:</label>
+    <input type="text" name="email" class="subEmail" id="sub_email">
+    <input type="button" name="button" value="Subscribe" disabled='disabled' id='bttnsubmit'/>
+    </form>
